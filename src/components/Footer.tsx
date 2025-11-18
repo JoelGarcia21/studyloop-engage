@@ -4,8 +4,7 @@ const socialLinks = [
   { name: "Facebook", icon: Facebook, href: "#" },
   { name: "Twitter", icon: Twitter, href: "#" },
   { name: "Instagram", icon: Instagram, href: "#" },
-  { name: "LinkedIn", icon: Linkedin, href: "#" },
-  { name: "Email", icon: Mail, href: "mailto:contact@studyloop.com" },
+  { name: "Email", icon: Mail, href: "#" },
 ];
 
 export const Footer = () => {

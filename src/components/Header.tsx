@@ -6,7 +6,7 @@ import { useState } from "react";
 const navLinks = [
   { name: "Inicio", href: "#inicio" },
   { name: "FAQ", href: "#faq" },
-  { name: "Contáctenos", href: "#contacto" },
+ //{ name: "Contáctenos", href: "#contacto" },
   { name: "Suscribirse", href: "#suscribirse" },
 ];
 
@@ -24,9 +24,13 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#inicio" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg group-hover:shadow-[var(--shadow-glow)] transition-all duration-300">
-              <span className="text-white font-bold text-xl">S</span>
-            </div>
+             <div className="w-20 h-12 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg group-hover:shadow-[var(--shadow-glow)] transition-all duration-300">
+              <img 
+                src= {'./logo_s.svg'}
+                alt="StudyLoopS Logo" 
+                className="w-10 h-10 text-white brightness-0 invert"
+              />
+        </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               StudyLoop
             </span>

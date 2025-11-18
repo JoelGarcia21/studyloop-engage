@@ -9,7 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { BookOpen, Brain, Users, Zap, Mail, MapPin, Phone } from "lucide-react";
+import { BookOpen, Sword, Trophy,Footprints, Users, Zap, Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -22,7 +22,7 @@ const Index = () => {
     if (email) {
       toast({
         title: "¡Suscripción exitosa!",
-        description: "Te has suscrito correctamente a nuestro boletín.",
+        description: "Te has suscrito correctamente.",
       });
       setEmail("");
     }
@@ -30,22 +30,22 @@ const Index = () => {
 
   const features = [
     {
-      icon: Brain,
-      title: "Aprendizaje Inteligente",
+      icon: Sword,
+      title: "Estudio Convertido en Juego",
       description:
-        "Sistema de repetición espaciada que optimiza tu memoria y retención.",
+         "Transforma tus apuntes y PDFs en cartas de preguntas y mini-retos adictivos con IA.",
     },
     {
-      icon: BookOpen,
-      title: "Material Organizado",
+      icon: Trophy,
+      title: "Progreso que Motiva",
       description:
-        "Gestiona tus apuntes, recursos y tareas en un solo lugar accesible.",
+        "Gana XP, sube de nivel, desbloquea cartas raras y compite en el ranking académico.",
     },
     {
-      icon: Users,
-      title: "Comunidad Activa",
+      icon: Footprints,
+       title: "Recompensas por Moverse",
       description:
-        "Conecta con otros estudiantes, comparte conocimientos y aprende juntos.",
+        "Desbloquea power-ups y comodines cumpliendo misiones físicas en el mundo real.",
     },
     {
       icon: Zap,
@@ -57,19 +57,19 @@ const Index = () => {
 
   const faqs = [
     {
-      question: "¿Qué es StudyLoop?",
+      question: "¿StudyLoop es un juego o una app de estudio?",
       answer:
-        "StudyLoop es una plataforma de aprendizaje diseñada para ayudar a estudiantes a organizar su material de estudio, optimizar su retención de conocimientos y conectar con una comunidad de aprendizaje activa.",
+      "¡Ambas cosas! Es la primera app que convierte tu estudio en una experiencia como Clash Royale o Pokémon GO. Transformamos tus apuntes en cartas de juego, tus sesiones de estudio en partidas y te recompensamos por mantenerte activo.",
     },
     {
-      question: "¿Es gratis usar StudyLoop?",
+       question: "¿Es gratis?",
       answer:
-        "Sí, ofrecemos un plan gratuito con funcionalidades básicas. También tenemos planes premium con características avanzadas para estudiantes que buscan maximizar su aprendizaje.",
+        "Sí, tenés un plan gratuito para probar todas las mecánicas principales. El plan premium desbloquea mazos ilimitados, estadísticas avanzadas y diferente rarezas de cartas.",
     },
     {
-      question: "¿Cómo funciona el sistema de repetición espaciada?",
+      question: "¿En serio tengo que moverme para desbloquear cosas?",
       answer:
-        "Nuestro algoritmo inteligente determina el momento óptimo para revisar cada concepto basándose en la curva del olvido, asegurando que la información se transfiera a tu memoria a largo plazo.",
+        "No es obligatorio pero completar misiones físicas te da ventajas en el juego: power-ups, cartas raras y XP extra. Combate el sedentarismo mientras estudias.",
     },
     {
       question: "¿Puedo usar StudyLoop en mi móvil?",
@@ -77,9 +77,9 @@ const Index = () => {
         "¡Por supuesto! StudyLoop está completamente optimizado para dispositivos móviles, tablets y computadoras. Puedes acceder desde cualquier lugar y en cualquier momento.",
     },
     {
-      question: "¿Cómo puedo compartir mis apuntes con otros?",
+      question: "¿Cómo convierto mis apuntes en cartas?",
       answer:
-        "Puedes crear grupos de estudio, compartir tus apuntes con la comunidad o enviarlos directamente a otros usuarios de StudyLoop con solo unos clics.",
+        "Es súper simple: cargás tus PDFs o apuntes en la app, y nuestra IA los transforma automáticamente en mazos de cartas con preguntas y retos. En segundos, tenés tu material de estudio gamificado.",
     },
   ];
 
@@ -104,16 +104,17 @@ const Index = () => {
               aprendizaje, organizar su material de estudio y alcanzar el éxito
               académico.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" >
+              <a href="#suscribirse">
+                <Button
                 size="lg"
                 className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-lg px-8 shadow-[var(--shadow-glow)]"
               >
                 Comenzar Gratis
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8">
-                Ver Demo
-              </Button>
+              </a>
+              
+              
             </div>
           </div>
         </div>
@@ -180,8 +181,8 @@ const Index = () => {
           </Accordion>
         </div>
       </section>
-
-      {/* Contact Section */}
+    
+      {/* Contact Section 
       <section id="contacto" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16 animate-fade-in">
@@ -220,7 +221,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-
+*/}
       {/* Subscribe Section */}
       <section id="suscribirse" className="py-20 px-4 bg-secondary/30">
         <div className="container mx-auto max-w-2xl">
@@ -229,7 +230,7 @@ const Index = () => {
               Únete a StudyLoop
             </h2>
             <p className="text-xl text-muted-foreground">
-              Recibe consejos de estudio, actualizaciones y recursos
+              Recibe actualizaciones y recursos
               exclusivos en tu correo
             </p>
           </div>
@@ -239,11 +240,11 @@ const Index = () => {
               <div>
                 <Input
                   type="email"
-                  placeholder="tu@email.com"
+                  placeholder="correo@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="h-12 text-lg"
+                  className="h-12 text-lg text-center "
                 />
               </div>
               <Button
