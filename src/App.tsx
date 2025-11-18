@@ -15,7 +15,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter  basename="/studyloop-engage">
           <Routes>
             <Route path="/" element={<Index />} />
             
