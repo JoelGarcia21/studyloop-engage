@@ -7,6 +7,7 @@
       "@/*": ["./src/*"]
     },
     "noImplicitAny": false,
+    "allowImportingTsExtensions":true,
     "noUnusedParameters": false,
     "skipLibCheck": true,
     "allowJs": true,
