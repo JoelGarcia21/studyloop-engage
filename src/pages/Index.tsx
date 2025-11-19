@@ -22,7 +22,7 @@ const Index = () => {
     if (email) {
       toast({
         title: "¡Suscripción exitosa!",
-        description: "Te has suscrito correctamente.",
+        description: "Te mandaremos la invitación para probar la app directamente a este correo.",
       });
       setEmail("");
     }
@@ -230,8 +230,7 @@ const Index = () => {
               Únete a StudyLoop
             </h2>
             <p className="text-xl text-muted-foreground">
-              Recibe actualizaciones y recursos
-              exclusivos en tu correo
+              Obtén acceso exclusivo al lanzamiento.
             </p>
           </div>
 

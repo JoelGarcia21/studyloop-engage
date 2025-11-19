@@ -26,9 +26,9 @@ export const Header = () => {
           <a href="#inicio" className="flex items-center space-x-2 group">
              <div className="w-20 h-12 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg group-hover:shadow-[var(--shadow-glow)] transition-all duration-300">
               <img 
-                src= {'./logo_s.svg'}
+                src= {'./favicon.png'}
                 alt="StudyLoopS Logo" 
-                className="w-10 h-10 text-white brightness-0 invert"
+                className="w-20 h-20 text-white"
               />
         </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
